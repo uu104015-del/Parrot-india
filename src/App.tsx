@@ -161,6 +161,10 @@ export default function App() {
 
   // 3. Cart Interaction Logics
   const handleAddToBucket = (parrot: Parrot) => {
+    if (!currentUser) {
+      setIsAuthOpen(true);
+      return;
+    }
     setCartItems((prevItems) => {
       const index = prevItems.findIndex((item) => item.parrot.id === parrot.id);
       if (index !== -1) {
@@ -388,6 +392,8 @@ export default function App() {
         onUpdateQuantity={handleUpdateCartQuantity}
         onRemoveItem={handleRemoveCartItem}
         onClearCart={handleClearCart}
+        user={currentUser}
+        onOpenAuth={() => setIsAuthOpen(true)}
       />
 
       {/* 5. Authentication Overlay Modal */}

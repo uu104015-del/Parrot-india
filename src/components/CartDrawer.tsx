@@ -10,6 +10,8 @@ interface CartDrawerProps {
   onUpdateQuantity: (id: string, amount: number) => void;
   onRemoveItem: (id: string) => void;
   onClearCart: () => void;
+  user: any;
+  onOpenAuth: () => void;
 }
 
 export default function CartDrawer({
@@ -18,7 +20,9 @@ export default function CartDrawer({
   cartItems,
   onUpdateQuantity,
   onRemoveItem,
-  onClearCart
+  onClearCart,
+  user,
+  onOpenAuth
 }: CartDrawerProps) {
   const [checkoutComplete, setCheckoutComplete] = useState(false);
   const [shippingFirstName, setShippingFirstName] = useState('');
@@ -30,6 +34,23 @@ export default function CartDrawer({
   const [shippingLandmark, setShippingLandmark] = useState('');
   const [shippingNotes, setShippingNotes] = useState('');
   const [generatedOrderId, setGeneratedOrderId] = useState('');
+
+  // Prefill details from authenticated user profile
+  React.useEffect(() => {
+    if (user) {
+      if (!shippingFirstName && user.name) {
+        const parts = user.name.split(' ');
+        setShippingFirstName(parts[0] || '');
+        setShippingLastName(parts.slice(1).join(' ') || '');
+      }
+      if (!shippingEmail && user.email) {
+        setShippingEmail(user.email);
+      }
+      if (!shippingPhone && user.phone) {
+        setShippingPhone(user.phone);
+      }
+    }
+  }, [user, isOpen]);
   
   const [paymentMethod, setPaymentMethod] = useState<'upi' | 'cod'>('upi');
   const [savedTotalAmount, setSavedTotalAmount] = useState(0);
@@ -891,8 +912,14 @@ export default function CartDrawer({
 
               {checkoutStep === 'cart' && (
                 <div className="mt-5 space-y-2">
-                  <button
-                    onClick={() => setCheckoutStep('shipping')}
+                   <button
+                     onClick={() => {
+                       if (!user) {
+                         onOpenAuth();
+                         return;
+                       }
+                       setCheckoutStep('shipping');
+                     }}
                     className="w-full py-4.5 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-xl text-xs sm:text-sm shadow-md hover:shadow-lg hover:shadow-emerald-990/30 active:scale-[0.99] transition-all cursor-pointer flex items-center justify-center gap-1.5"
                   >
                     Proceed to Companion Order

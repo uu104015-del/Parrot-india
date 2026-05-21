@@ -25,25 +25,12 @@ if (isRealFirebase) {
   try {
     app = initializeApp(firebaseConfig);
     auth = getAuth(app);
-    db = getFirestore(app, firebaseConfig.firestoreDatabaseId || '(default)');
-    console.log("🔥 Firebase initialized successfully with official project credentials.");
-    
-    // Validate connection to Firestore as requested by skill
-    const testConnection = async () => {
-      try {
-        await getDocFromServer(doc(db!, 'test', 'connection'));
-      } catch (error) {
-        if (error instanceof Error && error.message.includes('the client is offline')) {
-          console.error("Please check your Firebase configuration.");
-        }
-      }
-    };
-    testConnection();
+    console.log("🔥 Firebase Auth initialized successfully with official project credentials.");
   } catch (error) {
-    console.error("⚠️ Firebase registration failed during start:", error);
+    console.error("⚠️ Firebase initialization failed during start:", error);
   }
 } else {
-  console.log("🚀 Firebase is operating in offline/local simulation fallback. Complete Terms in the workspace to connect live cloud Firestore & Auth.");
+  console.log("🚀 Firebase is operating in offline/local simulation fallback.");
 }
 
 export enum OperationType {

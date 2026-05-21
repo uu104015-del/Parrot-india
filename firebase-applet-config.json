@@ -1,10 +1,8 @@
 {
-  "projectId": "true-minutia-507pf",
-  "appId": "1:356615559304:web:19248abbabab9d17ff273d",
-  "apiKey": "AIzaSyBC5OHddx97yDxE080bnaZw1mtB0x_rHIk",
-  "authDomain": "true-minutia-507pf.firebaseapp.com",
-  "firestoreDatabaseId": "ai-studio-3c2aef2c-9dfb-4de0-bc8f-b720a99f9185",
-  "storageBucket": "true-minutia-507pf.firebasestorage.app",
-  "messagingSenderId": "356615559304",
-  "measurementId": ""
+  "apiKey": "AIzaSyABKxCGh6yFpn_wOc4PN5tM47N1USmMH9Y",
+  "authDomain": "parrot-india-b5787.firebaseapp.com",
+  "projectId": "parrot-india-b5787",
+  "storageBucket": "parrot-india-b5787.firebasestorage.app",
+  "messagingSenderId": "780104774371",
+  "appId": "1:780104774371:web:d65ec8f9a036027458cbd6"
 }

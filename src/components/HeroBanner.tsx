@@ -22,21 +22,21 @@ export default function HeroBanner({ onExploreClick }: HeroBannerProps) {
                 <Leaf className="w-3.5 h-3.5" /> India's Most Trusted Parrot Aviary
               </span>
               <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1]">
-                Find Your Perfect <br />
+                Find & Buy Your <br />
                 <span className="bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-400 bg-clip-text text-transparent">
-                  Talking Companion
+                  Perfect Parrot Online
                 </span>
               </h2>
             </div>
 
             <p className="max-w-2xl mx-auto lg:mx-0 text-base sm:text-lg text-slate-300 font-light leading-relaxed">
-              Welcome to Parrot India. We specialize in legally sourced, DNA-certified, incredibly social, and hand-raised specialty parrots. Bring home a lifetime of laughter, mimicry, intelligence, and beautiful color.
+              Welcome to Parrot India. We are India's most trusted online store for healthy, beautiful, and hand-raised parrots. Choose from top categories and bring your new talking companion home safely.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
               <button
                 onClick={onExploreClick}
-                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 font-semibold text-white rounded-xl shadow-lg shadow-emerald-900/30 hover:shadow-xl hover:shadow-emerald-900/40 transform hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center gap-2 group cursor-pointer"
+                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 font-semibold text-white rounded-xl shadow-lg shadow-emerald-900/30 hover:shadow-xl hover:shadow-emerald-900/40 transform hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center gap-2 group cursor-pointer text-sm"
               >
                 Explore Current Availability
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -44,7 +44,7 @@ export default function HeroBanner({ onExploreClick }: HeroBannerProps) {
               
               <a
                 href="#contact-section"
-                className="w-full sm:w-auto text-center px-8 py-4 bg-slate-800/80 hover:bg-slate-800 font-semibold text-slate-200 hover:text-white rounded-xl border border-slate-700/60 transition-colors"
+                className="w-full sm:w-auto text-center px-8 py-4 bg-slate-800/80 hover:bg-slate-850 font-semibold text-slate-200 hover:text-white rounded-xl border border-slate-700/60 transition-colors text-sm"
                 onClick={(e) => {
                   e.preventDefault();
                   document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' });
@@ -58,15 +58,15 @@ export default function HeroBanner({ onExploreClick }: HeroBannerProps) {
             <div className="pt-6 border-t border-slate-800 flex flex-wrap justify-center lg:justify-start gap-x-8 gap-y-4 text-slate-400 text-xs sm:text-sm">
               <div className="flex items-center gap-1.5">
                 <Star className="w-4 h-4 text-emerald-400 fill-emerald-400/20" />
-                <span>DNA Certified Parrots</span>
+                <span>100% Healthy & Certified Birds</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <Heart className="w-4 h-4 text-emerald-400 fill-emerald-400/20" />
-                <span>Hand-Raised & Socialized</span>
+                <span>Hand-Raised & Friendly Parrots</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <Award className="w-4 h-4 text-emerald-400 fill-emerald-400/20" />
-                <span>Lifetime Support Plan</span>
+                <span>Safe Home Delivery & Expert Support</span>
               </div>
             </div>
 
