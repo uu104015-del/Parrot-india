@@ -1,0 +1,6 @@
+{
+  "name": "Parrot India",
+  "description": "An elegant, database-driven online store and stock-management platform for premium companion parrots, featuring a dynamic shopping cart and secure admin panel.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

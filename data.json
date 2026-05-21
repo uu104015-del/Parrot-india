@@ -1,0 +1,44 @@
+{
+  "parrots": [
+    {
+      "id": "parrot-1",
+      "name": "Aura",
+      "category": "Macaws",
+      "species": "Blue & Gold Macaw",
+      "price": 135000,
+      "description": "Extremely playful, highly intelligent, and beautiful companion with vibrant blue and bright gold feathers. Aura is hand-raised, gentle, and already knows basic greetings and whistles. Ideal for a loving home.",
+      "imageUrl": "/src/assets/images/macaw_portrait_1779307405891.png",
+      "age": "8 Months",
+      "healthStatus": "Fully Certified & Vet-Checked",
+      "talkativeLevel": "Excellent",
+      "available": true
+    },
+    {
+      "id": "parrot-2",
+      "name": "Echo",
+      "category": "African Greys",
+      "species": "Congo African Grey",
+      "price": 155000,
+      "description": "Echo is a prime Congolense African Grey. Famous worldwide for legendary cognitive abilities and vocabulary. Echo mimics ambient sounds perfectly and is currently picking up active conversational phrases.",
+      "imageUrl": "/src/assets/images/african_grey_portrait_1779307424635.png",
+      "age": "10 Months",
+      "healthStatus": "DNA Certified Male & Healthy",
+      "talkativeLevel": "Very High",
+      "available": true
+    },
+    {
+      "id": "parrot-3",
+      "name": "Casper",
+      "category": "Cockatoos",
+      "species": "Umbrella Cockatoo",
+      "price": 125000,
+      "description": "If you are looking for a gentle, extremely affectionate companion, Casper is the perfect fit. He loves head scratches, raises his majestic crest when excited, and has beautiful pure white plumage.",
+      "imageUrl": "/src/assets/images/cockatoo_portrait_1779307443037.png",
+      "age": "7 Months",
+      "healthStatus": "DNA Certified Female & Fully De-wormed",
+      "talkativeLevel": "High",
+      "available": true
+    }
+  ],
+  "enquiries": []
+}

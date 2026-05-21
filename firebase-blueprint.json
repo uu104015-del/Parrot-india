@@ -1,0 +1,92 @@
+{
+  "entities": {
+    "parrot": {
+      "title": "Parrot",
+      "description": "Information about an available companion parrot",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "category": { "type": "string" },
+        "species": { "type": "string" },
+        "price": { "type": "number" },
+        "description": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "age": { "type": "string" },
+        "healthStatus": { "type": "string" },
+        "talkativeLevel": { "type": "string" },
+        "available": { "type": "boolean" }
+      },
+      "required": ["id", "name", "species", "price"]
+    },
+    "order": {
+      "title": "Order",
+      "description": "An aviary purchase order placed by a customer",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "trackingCode": { "type": "string" },
+        "firstName": { "type": "string" },
+        "lastName": { "type": "string" },
+        "email": { "type": "string" },
+        "address": { "type": "string" },
+        "phone": { "type": "string" },
+        "pincode": { "type": "string" },
+        "landmark": { "type": "string" },
+        "notes": { "type": "string" },
+        "items": { "type": "array" },
+        "totalAmount": { "type": "number" },
+        "paymentMethod": { "type": "string" },
+        "date": { "type": "string" },
+        "utrNumber": { "type": "string" },
+        "promoCode": { "type": "string" },
+        "discountAmount": { "type": "number" }
+      },
+      "required": ["id", "firstName", "phone", "address", "totalAmount"]
+    },
+    "enquiry": {
+      "title": "Enquiry",
+      "description": "Customer contact inquiry request",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "phone": { "type": "string" },
+        "message": { "type": "string" },
+        "date": { "type": "string" }
+      },
+      "required": ["id", "name", "phone"]
+    },
+    "promocode": {
+      "title": "PromoCode",
+      "description": "A coupon code for discount calculations",
+      "type": "object",
+      "properties": {
+        "code": { "type": "string" },
+        "type": { "type": "string" },
+        "value": { "type": "number" },
+        "minOrder": { "type": "number" },
+        "active": { "type": "boolean" }
+      },
+      "required": ["code", "type", "value"]
+    }
+  },
+  "firestore": {
+    "/parrots/{parrotId}": {
+      "schema": "parrot",
+      "description": "Dynamic registered parrot companion listing"
+    },
+    "/orders/{orderId}": {
+      "schema": "order",
+      "description": "Aviary booking transaction registry"
+    },
+    "/enquiries/{enquiryId}": {
+      "schema": "enquiry",
+      "description": "Customer message dispatch requests"
+    },
+    "/promocodes/{code}": {
+      "schema": "promocode",
+      "description": "Discount calculation coupons"
+    }
+  }
+}
